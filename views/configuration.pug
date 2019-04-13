@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="css/hover.css")
+        link(href='media/blueIcon.png', rel='icon')
+        title berta - Configuration
+    body
+      nav
+        .n-left
+          h1 Configuration
+        .n-right
+          img(src="media/lightIcon.svg", class="hvr-shrink")
+      .form
+        - if(nothing == true)
+            form(action="/db/update", method="POST")
+                .f-left
+                  .infos
+                    input(type="text", name="name", placeholder="Name")
+                    br
+                    input(type="text", name="city", placeholder="City")
+                    br
+                    input(type="text", name="email", placeholder="Email")
+                    br
+                    input(type="text", name="wifi_name", placeholder="WIFI Name")
+                    br
+                    input(type="password", name="wifi_password", placeholder="WIFI Password")
+                  .apis
+                    input(type="text", name="facebook_apikey", placeholder="Facebook API Key")
+                    br
+                    input(type="text", name="google_apikey", placeholder="Google API Key")
+                    br
+                    input(type="text", name="instagram_apikey", placeholder="Instagram API Key")
+                    br
+                    input(type="text", name="twitter_apikey", placeholder="Twitter API Key")
+                .f-right
+                  button(type="submit", class="hvr-float") Next
+        - else
+          form(action="/db/update", method="POST")
+              .f-left
+                .infos
+                  input(type="text", name="name", placeholder="Name", value= name)
+                  br
+                  input(type="text", name="city", placeholder="City", value= city)
+                  br
+                  input(type="email", name="email", placeholder="Email", value= email)
+                  br
+                  input(type="text", name="wifi_name", placeholder="WIFI Name", value= wifi_name)
+                  br
+                  input(type="password", name="wifi_password", placeholder="WIFI Password", value= wifi_password)
+                .apis
+                  input(type="text", name="facebook_apikey", placeholder="Facebook API Key", value= facebook_apikey)
+                  br
+                  input(type="text", name="google_apikey", placeholder="Google API Key", value= google_apikey)
+                  br
+                  input(type="text", name="instagram_apikey", placeholder="Instagram API Key", value= instagram_apikey)
+                  br
+                  input(type="text", name="twitter_apikey", placeholder="Twitter API Key", value= twitter_apikey)
+              .f-right
+                button(type="submit", class="hvr-float") Next

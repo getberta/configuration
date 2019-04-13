@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="css/hover.css")
+        link(href='media/blueIcon.png', rel='icon')
+        title berta - Privacy and Security
+    body
+      nav
+        .n-left
+          h1 Privacy and Security
+        .n-right
+          img(src="media/lightIcon.svg", class="hvr-shrink")
+      section
+        .s-left
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ducimus atque corrupti. Unde delectus repellendus, amet asperiores, iure quisquam eaque excepturi quos tenetur tempore reiciendis! Beatae nemo magnam temporibus recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus, officia eveniet facere, neque iusto, voluptas consequatur asperiores earum dolorum rem. Sed dolore impedit modi, voluptatem id culpa minima laudantium!
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis eum explicabo officiis nulla, cum non sunt esse saepe totam qui animi, neque dolorem natus laborum necessitatibus laudantium adipisci harum dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, illo corporis. Obcaecati similique harum est nisi! Id sapiente animi magni libero similique deleniti doloremque, debitis assumenda commodi eos, nobis ab?
+          br
+          form(action="/api/conditions", method="POST")
+           input(type="checkbox", name="accept")
+           p I accept the above conditions.
+           button(type="submit", style="display: none", id="done") &nbsp
+        .s-right
+          button(id="finish", class="hvr-float") Finish
+      script(src="js/jquery.min.js")
+      script(src="js/main.js")
