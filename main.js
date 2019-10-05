@@ -189,7 +189,7 @@ app.post('/api/info', (req, res) => {
 
     var code = req.body.code;
 
-    if(code == 'bertaAuthCode') {
+    if(code == 'demoAuthCode') {
         Config.findOne({
             configed: "true"
         }, (err, config) => {
